@@ -5,7 +5,10 @@
                            txtNombre.Text,
                            txtApellido.Text,
                            txtGenero.Text,
-                           txtDireccion.Text
+                           txtDireccion.Text,
+                           txtDui.Text,
+                           txtEdad.Text,
+                           txtCorreo.Text
                            )
         If alumno.datosAceptados Then
             MsgBox("alumno " & alumno.nombreAlumno & " Registrado")

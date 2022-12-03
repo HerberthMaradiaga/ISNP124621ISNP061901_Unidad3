@@ -150,7 +150,6 @@
             Exit Sub
         Else
             Dui = duiA
-            datosCompletos = True
         End If
 
         If edadA.Length = 0 Then
