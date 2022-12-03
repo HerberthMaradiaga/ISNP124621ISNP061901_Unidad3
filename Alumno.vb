@@ -63,16 +63,6 @@
         End Set
     End Property
 
-    'metodo para edad del alumno
-    Public Property edadAlumno() As String
-        Get
-            Return Edad
-        End Get
-        Set(value As String)
-            Edad = value
-        End Set
-    End Property
-
     'metodo para correo del alumno
     Public Property correoAlumno() As String
         Get
@@ -80,6 +70,16 @@
         End Get
         Set(value As String)
             Correo = value
+        End Set
+    End Property
+
+    'metodo para edad del alumno
+    Public Property edadAlumno() As String
+        Get
+            Return Edad
+        End Get
+        Set(value As String)
+            Edad = value
         End Set
     End Property
 
@@ -103,8 +103,8 @@
                            ByVal generoA As String,
                            ByVal direccionA As String,
                            ByVal duiA As String,
-                           ByVal edadA As String,
-                           ByVal correoA As String
+                           ByVal correoA As String,
+                           ByVal edadA As String
                            )
         'asume que los datos ingresados son incorrectos
         datosCompletos = False
@@ -152,19 +152,19 @@
             Dui = duiA
         End If
 
-        If edadA.Length = 0 Then
-            MsgBox("Debe escribir la edad del alumno")
-            Exit Sub
-        Else
-            Edad = edadA
-        End If
-
         If correoA.Length = 0 Then
             MsgBox("Debe escribir el correo del alumno")
             Exit Sub
         Else
             Correo = correoA
             datosCompletos = True
+        End If
+
+        If edadA.Length = 0 Then
+            MsgBox("Debe escribir la edad del alumno")
+            Exit Sub
+        Else
+            Edad = edadA
         End If
     End Sub
 
