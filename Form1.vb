@@ -24,4 +24,9 @@
             txtCodigo.Text = alumno.generarCodigo(txtNombre.Text)
         End If
     End Sub
+    'esta instruccion cerrara el formulario al pulsar el boton salir
+    'sin necesidad de arrastrar el puntero hasta la X en la esquina de la pantalla
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Close()
+    End Sub
 End Class

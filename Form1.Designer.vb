@@ -43,6 +43,7 @@ Partial Class Form1
         Me.grpCodigo = New System.Windows.Forms.GroupBox()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.btnGenerar = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
         Me.grpDatos.SuspendLayout()
         CType(Me.dgvMostrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpCodigo.SuspendLayout()
@@ -213,13 +214,14 @@ Partial Class Form1
         '
         'grpCodigo
         '
+        Me.grpCodigo.Controls.Add(Me.btnSalir)
         Me.grpCodigo.Controls.Add(Me.txtCodigo)
         Me.grpCodigo.Controls.Add(Me.btnGenerar)
         Me.grpCodigo.Controls.Add(Me.btnAgregar)
         Me.grpCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grpCodigo.Location = New System.Drawing.Point(25, 19)
         Me.grpCodigo.Name = "grpCodigo"
-        Me.grpCodigo.Size = New System.Drawing.Size(650, 103)
+        Me.grpCodigo.Size = New System.Drawing.Size(804, 103)
         Me.grpCodigo.TabIndex = 2
         Me.grpCodigo.TabStop = False
         Me.grpCodigo.Text = "Generar Codigo Alumno"
@@ -228,6 +230,7 @@ Partial Class Form1
         '
         Me.txtCodigo.Location = New System.Drawing.Point(17, 39)
         Me.txtCodigo.Name = "txtCodigo"
+        Me.txtCodigo.ReadOnly = True
         Me.txtCodigo.Size = New System.Drawing.Size(258, 24)
         Me.txtCodigo.TabIndex = 1
         '
@@ -239,6 +242,15 @@ Partial Class Form1
         Me.btnGenerar.TabIndex = 0
         Me.btnGenerar.Text = "Generar Codigo"
         Me.btnGenerar.UseVisualStyleBackColor = True
+        '
+        'btnSalir
+        '
+        Me.btnSalir.Location = New System.Drawing.Point(645, 31)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(75, 32)
+        Me.btnSalir.TabIndex = 6
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -279,4 +291,5 @@ Partial Class Form1
     Friend WithEvents lblEdad As Label
     Friend WithEvents lblDui As Label
     Friend WithEvents dgvMostrar As DataGridView
+    Friend WithEvents btnSalir As Button
 End Class
