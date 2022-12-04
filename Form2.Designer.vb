@@ -53,6 +53,7 @@ Partial Class Form2
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.btnGenerar = New System.Windows.Forms.Button()
         Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.grpDatos.SuspendLayout()
         CType(Me.dgvMostrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpCodigo.SuspendLayout()
@@ -70,6 +71,7 @@ Partial Class Form2
         '
         'grpDatos
         '
+        Me.grpDatos.Controls.Add(Me.Label2)
         Me.grpDatos.Controls.Add(Me.txtclase)
         Me.grpDatos.Controls.Add(Me.txtcolor)
         Me.grpDatos.Controls.Add(Me.txttipo)
@@ -203,7 +205,7 @@ Partial Class Form2
         '
         Me.txtcapacidad.Location = New System.Drawing.Point(108, 185)
         Me.txtcapacidad.Name = "txtcapacidad"
-        Me.txtcapacidad.Size = New System.Drawing.Size(311, 24)
+        Me.txtcapacidad.Size = New System.Drawing.Size(88, 24)
         Me.txtcapacidad.TabIndex = 8
         '
         'txtaño
@@ -313,6 +315,15 @@ Partial Class Form2
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(202, 188)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(77, 18)
+        Me.Label2.TabIndex = 17
+        Me.Label2.Text = "Toneladas"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -364,4 +375,5 @@ Partial Class Form2
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Label2 As Label
 End Class
