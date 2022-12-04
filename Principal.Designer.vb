@@ -22,6 +22,7 @@ Partial Class Principal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Principal))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnregistroe = New System.Windows.Forms.Button()
         Me.btnregistroa = New System.Windows.Forms.Button()
@@ -32,7 +33,7 @@ Partial Class Principal
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(271, 27)
+        Me.Label1.Location = New System.Drawing.Point(380, 54)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(184, 25)
         Me.Label1.TabIndex = 0
@@ -41,7 +42,7 @@ Partial Class Principal
         'btnregistroe
         '
         Me.btnregistroe.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnregistroe.Location = New System.Drawing.Point(89, 246)
+        Me.btnregistroe.Location = New System.Drawing.Point(198, 273)
         Me.btnregistroe.Name = "btnregistroe"
         Me.btnregistroe.Size = New System.Drawing.Size(193, 34)
         Me.btnregistroe.TabIndex = 1
@@ -51,7 +52,7 @@ Partial Class Principal
         'btnregistroa
         '
         Me.btnregistroa.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnregistroa.Location = New System.Drawing.Point(437, 246)
+        Me.btnregistroa.Location = New System.Drawing.Point(546, 273)
         Me.btnregistroa.Name = "btnregistroa"
         Me.btnregistroa.Size = New System.Drawing.Size(193, 34)
         Me.btnregistroa.TabIndex = 2
@@ -61,7 +62,7 @@ Partial Class Principal
         'btnSalir
         '
         Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalir.Location = New System.Drawing.Point(306, 342)
+        Me.btnSalir.Location = New System.Drawing.Point(415, 369)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(91, 32)
         Me.btnSalir.TabIndex = 3
@@ -72,7 +73,8 @@ Partial Class Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.ClientSize = New System.Drawing.Size(931, 528)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnregistroa)
         Me.Controls.Add(Me.btnregistroe)

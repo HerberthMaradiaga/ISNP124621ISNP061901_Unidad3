@@ -24,6 +24,7 @@ Partial Class Form2
     Private Sub InitializeComponent()
         Me.lbltitulo = New System.Windows.Forms.Label()
         Me.grpDatos = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtclase = New System.Windows.Forms.TextBox()
         Me.txtcolor = New System.Windows.Forms.TextBox()
         Me.txttipo = New System.Windows.Forms.TextBox()
@@ -53,7 +54,6 @@ Partial Class Form2
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.btnGenerar = New System.Windows.Forms.Button()
         Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.grpDatos.SuspendLayout()
         CType(Me.dgvMostrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpCodigo.SuspendLayout()
@@ -95,6 +95,15 @@ Partial Class Form2
         Me.grpDatos.TabIndex = 19
         Me.grpDatos.TabStop = False
         Me.grpDatos.Text = "Datos Auto"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(202, 188)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(77, 18)
+        Me.Label2.TabIndex = 17
+        Me.Label2.Text = "Toneladas"
         '
         'txtclase
         '
@@ -315,19 +324,11 @@ Partial Class Form2
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(202, 188)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 18)
-        Me.Label2.TabIndex = 17
-        Me.Label2.Text = "Toneladas"
-        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.ISNP124621ISNP061901_Unidad3.My.Resources.Resources._Auto
         Me.ClientSize = New System.Drawing.Size(941, 702)
         Me.Controls.Add(Me.lbltitulo)
         Me.Controls.Add(Me.grpDatos)

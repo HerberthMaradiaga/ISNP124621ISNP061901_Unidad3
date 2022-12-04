@@ -265,6 +265,7 @@ Partial Class Form1
         '
         'grpCodigo
         '
+        Me.grpCodigo.BackColor = System.Drawing.SystemColors.Control
         Me.grpCodigo.Controls.Add(Me.btnSalir)
         Me.grpCodigo.Controls.Add(Me.txtCodigo)
         Me.grpCodigo.Controls.Add(Me.btnGenerar)
@@ -317,6 +318,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.ISNP124621ISNP061901_Unidad3.My.Resources.Resources.estudiante
         Me.ClientSize = New System.Drawing.Size(923, 674)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.grpDatos)

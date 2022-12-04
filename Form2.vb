@@ -12,9 +12,10 @@
                           )
 
         If auto.datosAceptados Then
-            MsgBox("Auto " & auto.marcaAuto & " " & auto.modeloAuto & " Registrado con exito")
+            If auto.datosCompletos = True Then
+                MsgBox("Auto " & auto.marcaAuto & " " & auto.modeloAuto & " Registrado con exito")
 
-            dgvMostrar.Rows.Add(txtCodigo.Text,
+                dgvMostrar.Rows.Add(txtCodigo.Text,
                             auto.marcaAuto,
                             auto.modeloAuto,
                             auto.añoAuto,
@@ -22,16 +23,17 @@
                             auto.tipoAuto,
                             auto.claseAuto,
                             auto.colorAuto)
-        End If
 
-        txtCodigo.Text = ""
-        txtmarca.Text = ""
-        txtmodelo.Text = ""
-        txtaño.Text = ""
-        txtcapacidad.Text = ""
-        txttipo.Text = ""
-        txtcolor.Text = ""
-        txtclase.Text = ""
+                txtCodigo.Text = ""
+                txtmarca.Text = ""
+                txtmodelo.Text = ""
+                txtaño.Text = ""
+                txtcapacidad.Text = ""
+                txttipo.Text = ""
+                txtcolor.Text = ""
+                txtclase.Text = ""
+            End If
+        End If
     End Sub
 
     Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
