@@ -1,6 +1,6 @@
 ﻿Public Class Alumno
     'declaracion de propiedades
-    Private codigo As String
+    Private Codigo As String
     Private Nombre As String
     Private Apellido As String
     Private Genero As String
@@ -103,8 +103,8 @@
                            ByVal generoA As String,
                            ByVal direccionA As String,
                            ByVal duiA As String,
-                           ByVal correoA As String,
-                           ByVal edadA As String
+                           ByVal edadA As String,
+                           ByVal correoA As String
                            )
         'asume que los datos ingresados son incorrectos
         datosCompletos = False
@@ -113,7 +113,7 @@
             MsgBox("Debe generar el codigo del alumno")
             Exit Sub
         Else
-            codigo = codigoA
+            Codigo = codigoA
         End If
         If nombreA.Length = 0 Then
             MsgBox("Debe escribir el nombre del alumno")
@@ -152,19 +152,19 @@
             Dui = duiA
         End If
 
+        If edadA.Length = 0 Then
+            MsgBox("Debe escribir la edad del alumno")
+            Exit Sub
+        Else
+            Edad = edadA
+        End If
+
         If correoA.Length = 0 Then
             MsgBox("Debe escribir el correo del alumno")
             Exit Sub
         Else
             Correo = correoA
             datosCompletos = True
-        End If
-
-        If edadA.Length = 0 Then
-            MsgBox("Debe escribir la edad del alumno")
-            Exit Sub
-        Else
-            Edad = edadA
         End If
     End Sub
 
@@ -174,9 +174,14 @@
         Dim numero As Single
 
         valor1 = UCase(Left(nombre, 1))
+        'del nombre se tomara la primera letra de la derecha y ademas se pasara a mayuscula
         valor2 = Right(nombre, 2)
+        'en este paramtro se le indica que tome las dos primeras letras de la izquierda
         numero = Int(Rnd() * 1000) + 65
-
+        'numero sera igual a un numero entero aleatorio, y se le suma 65 para que no se repita
+        'la funcion retorna el valor del procedimiento anterior
         Return valor1 & numero & valor2
     End Function
+
+
 End Class

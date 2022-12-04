@@ -41,9 +41,18 @@ Partial Class Form1
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.grpCodigo = New System.Windows.Forms.GroupBox()
+        Me.btnSalir = New System.Windows.Forms.Button()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.btnGenerar = New System.Windows.Forms.Button()
-        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpDatos.SuspendLayout()
         CType(Me.dgvMostrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpCodigo.SuspendLayout()
@@ -68,9 +77,9 @@ Partial Class Form1
         Me.grpDatos.Controls.Add(Me.Label1)
         Me.grpDatos.Controls.Add(Me.lblNombre)
         Me.grpDatos.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpDatos.Location = New System.Drawing.Point(27, 130)
+        Me.grpDatos.Location = New System.Drawing.Point(27, 193)
         Me.grpDatos.Name = "grpDatos"
-        Me.grpDatos.Size = New System.Drawing.Size(846, 385)
+        Me.grpDatos.Size = New System.Drawing.Size(874, 448)
         Me.grpDatos.TabIndex = 3
         Me.grpDatos.TabStop = False
         Me.grpDatos.Text = "Datos Alumno"
@@ -93,6 +102,7 @@ Partial Class Form1
         '
         Me.txtDui.Location = New System.Drawing.Point(520, 44)
         Me.txtDui.Name = "txtDui"
+        Me.txtDui.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtDui.Size = New System.Drawing.Size(311, 24)
         Me.txtDui.TabIndex = 14
         '
@@ -126,9 +136,10 @@ Partial Class Form1
         'dgvMostrar
         '
         Me.dgvMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvMostrar.Location = New System.Drawing.Point(34, 244)
+        Me.dgvMostrar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        Me.dgvMostrar.Location = New System.Drawing.Point(15, 244)
         Me.dgvMostrar.Name = "dgvMostrar"
-        Me.dgvMostrar.Size = New System.Drawing.Size(778, 135)
+        Me.dgvMostrar.Size = New System.Drawing.Size(825, 186)
         Me.dgvMostrar.TabIndex = 10
         '
         'txtApellido
@@ -205,7 +216,7 @@ Partial Class Form1
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(493, 31)
+        Me.btnAgregar.Location = New System.Drawing.Point(493, 33)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(75, 32)
         Me.btnAgregar.TabIndex = 5
@@ -219,12 +230,21 @@ Partial Class Form1
         Me.grpCodigo.Controls.Add(Me.btnGenerar)
         Me.grpCodigo.Controls.Add(Me.btnAgregar)
         Me.grpCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpCodigo.Location = New System.Drawing.Point(25, 19)
+        Me.grpCodigo.Location = New System.Drawing.Point(25, 82)
         Me.grpCodigo.Name = "grpCodigo"
         Me.grpCodigo.Size = New System.Drawing.Size(804, 103)
         Me.grpCodigo.TabIndex = 2
         Me.grpCodigo.TabStop = False
         Me.grpCodigo.Text = "Generar Codigo Alumno"
+        '
+        'btnSalir
+        '
+        Me.btnSalir.Location = New System.Drawing.Point(645, 31)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(75, 32)
+        Me.btnSalir.TabIndex = 6
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
         '
         'txtCodigo
         '
@@ -243,20 +263,62 @@ Partial Class Form1
         Me.btnGenerar.Text = "Generar Codigo"
         Me.btnGenerar.UseVisualStyleBackColor = True
         '
-        'btnSalir
+        'Label2
         '
-        Me.btnSalir.Location = New System.Drawing.Point(645, 31)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(75, 32)
-        Me.btnSalir.TabIndex = 6
-        Me.btnSalir.Text = "Salir"
-        Me.btnSalir.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(337, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(232, 25)
+        Me.Label2.TabIndex = 17
+        Me.Label2.Text = "Ingreso de Estudiantes"
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Codigo"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nombre"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Apellido"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Genero"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Direccion"
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "DUI"
+        Me.Column6.Name = "Column6"
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Correo"
+        Me.Column7.Name = "Column7"
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Edad"
+        Me.Column8.Name = "Column8"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(923, 539)
+        Me.ClientSize = New System.Drawing.Size(923, 674)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.grpDatos)
         Me.Controls.Add(Me.grpCodigo)
         Me.Name = "Form1"
@@ -267,6 +329,7 @@ Partial Class Form1
         Me.grpCodigo.ResumeLayout(False)
         Me.grpCodigo.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -292,4 +355,13 @@ Partial Class Form1
     Friend WithEvents lblDui As Label
     Friend WithEvents dgvMostrar As DataGridView
     Friend WithEvents btnSalir As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
 End Class

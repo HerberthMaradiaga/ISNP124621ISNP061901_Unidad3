@@ -1,6 +1,7 @@
 ﻿Public Class Form1
     Dim alumno As New Alumno
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+
         alumno.datosAlumno(txtCodigo.Text,
                            txtNombre.Text,
                            txtApellido.Text,
@@ -10,11 +11,28 @@
                            txtEdad.Text,
                            txtCorreo.Text
                            )
-        If alumno.datosAceptados Then
-            MsgBox("alumno " & alumno.nombreAlumno & " Registrado")
-        Else
 
+        dgvMostrar.Rows.Add(txtCodigo.Text,
+                            alumno.nombreAlumno,
+                            alumno.apellidoAlumno,
+                            alumno.generoAlumno,
+                            alumno.direccionAlumno,
+                            alumno.duiAlumno,
+                            alumno.correoAlumno,
+                            alumno.edadAlumno)
+
+        If alumno.datosAceptados Then
+            MsgBox("alumno " & alumno.nombreAlumno & " " & alumno.apellidoAlumno & " Registrado con exito")
         End If
+
+        txtCodigo.Text = ""
+        txtNombre.Text = ""
+        txtApellido.Text = ""
+        txtGenero.Text = ""
+        txtDireccion.Text = ""
+        txtDui.Text = ""
+        txtEdad.Text = ""
+        txtCorreo.Text = ""
 
     End Sub
     Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
