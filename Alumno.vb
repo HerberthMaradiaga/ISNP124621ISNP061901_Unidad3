@@ -145,8 +145,8 @@
             Direccion = direccionA
         End If
 
-        If duiA.Length = 0 Then
-            MsgBox("Debe escribir el dui del alumno")
+        If duiA.Length > 0 And duiA.Length < 9 Then
+            MsgBox("Debe escribir el dui de formato 00000000-0")
             Exit Sub
         Else
             Dui = duiA
